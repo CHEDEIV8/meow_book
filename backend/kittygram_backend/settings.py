@@ -11,7 +11,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'key-missing')
 
 DEBUG = os.getenv('DEBUG_VALUE', 'False').lower() == 'true'
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(',')
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'allow_hosts_missing').split(',')
 
 INSTALLED_APPS = [
     'django.contrib.admin',
