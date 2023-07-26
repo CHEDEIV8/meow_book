@@ -1,58 +1,75 @@
 ﻿# Kittygram
+
 ### Описание
-Kittygram — социальная сеть для обмена фотографиями любимых питомцев. Состоит из бэкенд-приложения на Django и фронтенд-приложения на React. Поддерживает регистрацию и авторизацию, можно добавить нового котика на сайт или изменить существующего, а также просмотреть записи других пользователей.
+
+**Kittygram** — социальная сеть для обмена фотографиями любимых питомцев. Состоит из бэкенд-приложения на Django и фронтенд-приложения на React. Поддерживает регистрацию и авторизацию, можно добавить нового котика на сайт или изменить существующего, а также просмотреть записи других пользователей.
+
 ### Как развернуть проект локально
+
 1. Клонировать репозиторий:
 
-`        `git@github.com:CHEDEIV8/kittygram\_final.git
-cd kittygram\_final/
+	- [git@github.com:CHEDEIV8/kittygram\_final.git](git@github.com:CHEDEIV8/kittygram%5C_final.git)
+	- cd kittygram\_final/
 
-2. Создать в папке kittygram\_final/ файл .env с переменными окружения (см. [.env.example](.env.example)).
-2. Собрать и запустить докер-контейнеры через Docker Compose:
+2. Создать в папке **kittygram\_final/** файл **.env** с переменными окружения (см. [.env.example](.env.example)).
 
-   `         `docker compose up --build
-### Как развернуть проект на сервере
-4. Создать папку kittygram/ с файлом .env в домашней директории сервера (см. [.env.example](.env.example)).
+3. Собрать и запустить докер-контейнеры через Docker Compose:
 
-   `         `cd ~
-   mkdir kittygram
-   nano kittygram/.env
-5. Настроить в nginx перенаправление запросов на порт 9000:
+	- docker compose up --build
 
-   `         `server {
-   `    `server\_name <...>;
-   `    `server\_tokens off;
+### Как развернуть проект на серверe
+1. Создать папку **kittygram/** с файлом .env в домашней директории сервера (см. [.env.example](.env.example)).
+	- cd ~
+	- mkdir kittygram
+	- nano kittygram/.env
 
-   `    `location / {
-   `        `proxy\_pass http://127.0.0.1:9000;
-   `    `}
-   }
-6. Добавить в GitHub Actions следующие секреты:
-- -        DOCKER\_USERNAME - логин от Docker Hub
-- -        DOCKER\_PASSWORD - пароль от Docker Hub
-- -        SSH\_KEY - закрытый ssh-ключ для подключения к серверу
-- -        SSH\_PASSPHRASE - passphrase от этого ключа
-- -        USER - имя пользователя на сервере
-- -        HOST - IP-адрес сервера
-- -        TELEGRAM\_TO - ID телеграм-аккаунта для оповещения об успешном деплое
-- -        TELEGRAM\_TOKEN - токен телеграм-бота
-### **Используемые технологии**
-\-       Python 3.10
+2. Настроить в nginx перенаправление запросов на порт 9000:
+```
+    server { 
+    	server_name <...>; 
+    	server_tokens off;
+    	location / { 
+    		proxy_pass http://127.0.0.1:9000; 
+    	}
+    }
+```
+3. Добавить в GitHub Actions следующие секреты:
 
-\-       Django
+	- DOCKER\_USERNAME - логин от Docker Hub
 
-\-       Django REST Framework
+	- DOCKER\_PASSWORD - пароль от Docker Hub
 
-\-       Node.js
+	- SSH\_KEY - закрытый ssh-ключ для подключения к серверу
 
-\-       React
+	- SSH\_PASSPHRASE - passphrase от этого ключа
 
-\-       Gunicorn
+	- USER - имя пользователя на сервере
 
-\-       Nginx
+	- HOST - IP-адрес сервера
 
-\-       Docker
+	- TELEGRAM\_TO - ID телеграм-аккаунта для оповещения об успешном деплое
 
-\-       GitHub Actions
+	 - TELEGRAM\_TOKEN - токен телеграм-бота
+
+### Используемые технологии
+- Python 3.10
+
+\- Django
+
+\- Django REST Framework
+
+\- Node.js
+  
+\- React
+
+\- Gunicorn
+
+\- Nginx
+
+\- Docker
+
+\- GitHub Actions
+
 ### Об авторе
-Чередниченко Денис https://github.com/CHEDEIV8. 
+
+Чередниченко Денис https://github.com/CHEDEIV8.
