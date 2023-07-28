@@ -1,28 +1,37 @@
-﻿#Проект: meow_book
+﻿# Проект: meow_book
 
-### Описание
+---
+
+### Описание:
 
 **meow_book** — социальная сеть для обмена фотографиями любимых питомцев. Состоит из бэкенд-приложения на Django и фронтенд-приложения на React. Поддерживает регистрацию и авторизацию, можно добавить нового котика на сайт или изменить существующего, а также просмотреть записи других пользователей.
 
-### Как развернуть проект локально
+---
+
+
+### Как развернуть проект локально:
 
 1. Клонировать репозиторий:
-
-	- [git@github.com:CHEDEIV8/kittygram\_final.git](git@github.com:CHEDEIV8/kittygram%5C_final.git)
-	- cd kittygram\_final/
-
-2. Создать в папке **kittygram\_final/** файл **.env** с переменными окружения (см. [.env.example](.env.example)).
+```
+	git@github.com:CHEDEIV8/meow_book.git
+	cd kittygram\_final/
+```
+2. Создать в папке kittygram\_final/ файл **.env** с переменными окружения (см. [.env.example](.env.example)).
 
 3. Собрать и запустить докер-контейнеры через Docker Compose:
+```
+	docker compose up --build
+```
 
-	- docker compose up --build
+---
 
-### Как развернуть проект на серверe
-1. Создать папку **kittygram/** с файлом .env в домашней директории сервера (см. [.env.example](.env.example)).
-	- cd ~
-	- mkdir kittygram
-	- nano kittygram/.env
-
+### Как развернуть проект на серверe:
+1. Создать папку kittygram/ с файлом .env в домашней директории сервера (см. [.env.example](.env.example)).
+```
+	cd ~
+	mkdir kittygram
+	nano kittygram/.env
+```
 2. Настроить в nginx перенаправление запросов на порт 9000:
 ```
     server { 
@@ -35,7 +44,7 @@
 ```
 3. Добавить в GitHub Actions следующие секреты:
 
-	- DOCKER\_USERNAME - логин от Docker Hub
+    - DOCKER\_USERNAME - логин от Docker Hub
 
 	- DOCKER\_PASSWORD - пароль от Docker Hub
 
@@ -49,27 +58,32 @@
 
 	- TELEGRAM\_TO - ID телеграм-аккаунта для оповещения об успешном деплое
 
-	 - TELEGRAM\_TOKEN - токен телеграм-бота
+	- TELEGRAM\_TOKEN - токен телеграм-бота
 
-### Используемые технологии
-\- Python 3.10
+---
 
-\- Django
+### Используемые технологии:
 
-\- Django REST Framework
+- Python 3.10
 
-\- Node.js
+- Django
+
+- Django REST Framework
+
+- Node.js
   
-\- React
+- React
 
-\- Gunicorn
+- Gunicorn
 
-\- Nginx
+- Nginx
 
-\- Docker
+- Docker
 
-\- GitHub Actions
+- GitHub Actions
+
+---
 
 ### Об авторе
 
-Чередниченко Денис https://github.com/CHEDEIV8.
+Автор проекта: **Денис Чередниченко**
