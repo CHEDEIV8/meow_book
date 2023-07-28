@@ -14,7 +14,7 @@
 1. Клонировать репозиторий:
 ```
 	git@github.com:CHEDEIV8/meow_book.git
-	cd kittygram\_final/
+	cd kittygram_final/
 ```
 2. Создать в папке kittygram\_final/ файл **.env** с переменными окружения (см. [.env.example](.env.example)).
 
@@ -44,7 +44,7 @@
 ```
 3. Добавить в GitHub Actions следующие секреты:
 
-    - DOCKER\_USERNAME - логин от Docker Hub
+    	- DOCKER\_USERNAME - логин от Docker Hub
 
 	- DOCKER\_PASSWORD - пароль от Docker Hub
 
